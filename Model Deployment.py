@@ -24,14 +24,17 @@ def analyze_file_and_prompt(file, user_prompt):
 st.set_page_config(page_title="Marketing Campaign Analyzer", layout="centered")
 
 # === Logo and Project Name ===
-logo_path = r"C:\Users\kirol\OneDrive - Arab Open University - AOU\Desktop\Test\logo.png"  # ضع اللوجو في نفس مجلد السكربت
+logo_path = r"C:\Users\kirol\OneDrive - Arab Open University - AOU\Desktop\Test\logo.png"
 col1, col2 = st.columns([1, 6])
 with col1:
     st.image(logo_path, width=80)
 with col2:
-    st.markdown("## 📊 Marketing Campaign Analyzer")
+    st.markdown("## Marketing Campaign Analyzer (MCA)")
 
 st.markdown("---")
+
+# === Info Message ABOVE Upload ===
+st.info("Please upload a file and enter a message to start analysis.")
 
 # === Small Page 1: File Upload ===
 st.markdown("### 🗂️ Upload Data")
@@ -50,6 +53,5 @@ if uploaded_file and user_prompt:
         st.success("✅ Analysis Complete!")
         st.markdown("#### 📌 Response:")
         st.write(result)
-else:
-    st.info("Please upload a file and enter a message to start analysis.")
-
+        st.markdown("---")
+        st.markdown("🎉 **Thanks for using MCA**")
