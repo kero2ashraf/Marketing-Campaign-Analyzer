@@ -55,7 +55,7 @@ st.markdown("## 📊 Marketing Campaign Analyzer (MCA)")
 st.markdown("---")
 st.info("Upload XLSX, CSV, PDF or TXT and enter a message to start.")
 
-uploaded_file = st.file_uploader("Upload your file", type=["pdf","xlsx","csv","txt"])
+uploaded_file = st.file_uploader("Upload your file", type=["xlsx","csv"])
 user_prompt   = st.text_input("Enter your message", placeholder="e.g., Summarize key findings")
 
 st.markdown("### 🧠 Gemini Result")
