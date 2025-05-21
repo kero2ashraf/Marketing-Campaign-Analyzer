@@ -1,5 +1,2 @@
-requirements.txt
-
 streamlit
-os
-genai
+google-generativeai
